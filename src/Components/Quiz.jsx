@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import "./Quiz.css"
 import {  useLocation, useNavigate } from "react-router-dom";
 import trivia from '../fetchapi';
@@ -7,27 +7,25 @@ import Search from './Search';
 
 function Quiz() {
 let  navigate = useNavigate()
- let [val ,setVal] = useState(JSON.parse(localStorage.getItem("setOfQuestions"))|| [])
-  let location = useLocation()   // ye location object deta hai
- let [count, setCount] = useState(JSON.parse(localStorage.getItem("counter")) || 0)
- let correct= useRef(0)
- let incorrect = useRef(0)
- 
- let [holdingQuestions, setHoldingQuestions]= useState([])
- let [totalLength, setTotallength] = useState()
+let [val ,setVal] = useState(JSON.parse(localStorage.getItem("setOfQuestions"))|| [])
+let location = useLocation()   // ye location object deta hai
+let [count, setCount] = useState(JSON.parse(localStorage.getItem("counter")) || 0)
+let correct= useRef(0)
+let incorrect = useRef(0)
+let [holdingQuestions, setHoldingQuestions]= useState([])
+let [totalLength, setTotallength] = useState()
 
 
 
 
 function getShuffledOptions(item) {
-
   let options = [item.correctAnswer, ...item.incorrectAnswers];
 
   for (let i = options.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [options[i], options[j]] = [options[j], options[i]];
   }
-return options
+  return options
 }
 
   

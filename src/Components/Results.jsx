@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {useState} from 'react'
 import "./Results.css"
-
 import { useLocation, useNavigate } from 'react-router-dom';
 
 

@@ -10,11 +10,11 @@ function Reviews() {
 let g = JSON.parse(localStorage.getItem("APIQuestions"))
 
 let h = JSON.parse(localStorage.getItem("setOfQuestions"))|| []
+ 
 setChecking2([...h])
 setReview(g)
 
 }
-
 
 ,[])
 

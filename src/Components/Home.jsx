@@ -4,22 +4,20 @@ import "./Home.css"
 import { categorys } from './categories.js';
 
 function Home() {
-
-  let [category, setCategory]= useState("")
-  let [choice, setChoice]= useState("")
   let [range, setRange] =   useState(5)
+  let category = useRef("")
+  let choice = useRef("")
+  let bg = useRef()
+  let  navigate = useNavigate()
 
-
-let bg = useRef()
-
-useEffect(()=>{
+  useEffect(()=>{
   if(localStorage.getItem("setOfQuestions")&&localStorage.getItem("counter")){
     localStorage.clear()
   }
 },[])
 
 
- let  navigate = useNavigate()
+ 
 
 
 async function submithandler(e){
@@ -34,7 +32,7 @@ async function submithandler(e){
 
  localStorage.setItem("counter",JSON.stringify(0))
  
- navigate("/quiz", { state: {  results:[category, range, choice]} });
+ navigate("/quiz", { state: {  results:[category.current, range, choice.current]} });
 
 }
 
@@ -62,7 +60,7 @@ function bgcolors(q){
             <div className="field ">
               <label htmlFor="category">Category</label>
              <select id="category" className="select" required value={category}
-             onChange={(e) => setCategory(e.target.value)}>
+             onChange={(e) => category.current = e.target.value}>
                <option value="" disabled>Select a category</option>
 
 
@@ -82,9 +80,9 @@ function bgcolors(q){
             <div className="field">
               <label>Difficulty</label>
              <div className="choices" ref={bg}>
-  <button type="button" className="chip " onClick={() => {  setChoice("easy"); bgcolors(0); }}>Easy</button>
-  <button type="button" className="chip" onClick={() => {  setChoice("medium");  bgcolors(1);  }}>Medium</button>
-  <button type="button" className="chip" onClick={() => { setChoice("hard");  bgcolors(2); }}>Hard</button>
+  <button type="button" className="chip " onClick={() => {  choice.current = "easy"; bgcolors(0); }}>Easy</button>
+  <button type="button" className="chip" onClick={() => {  choice.current = "medium";  bgcolors(1);}}>Medium</button>
+  <button type="button" className="chip" onClick={() => { choice.current = "hard";  bgcolors(2); }}>Hard</button>
 </div>
 
  
