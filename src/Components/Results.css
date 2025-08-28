@@ -1,0 +1,32 @@
+.card{
+      background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0)
+  );
+  border:1px solid #1f2937;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+ 
+
+  .stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    background: #0b1220;
+    margin-bottom: 10px;
+}
+
+.score{
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+ 

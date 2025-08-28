@@ -1,0 +1,79 @@
+.review-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.review-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option {
+  padding: 12px 15px;
+  border-radius: 8px;
+ 
+  transition: 0.2s;
+}
+
+
+
+.correct-note {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+
+
+.option {
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+  background: rgb(52, 52, 78);
+  cursor: default;
+}
+
+ 
+.correct {
+  background: #e6f9e9;
+  border: 1px solid #4caf50;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+ 

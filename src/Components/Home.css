@@ -1,0 +1,89 @@
+.cardhome{
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0)
+  );
+  border:1px solid #1f2937;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 500px;
+}
+
+.cardhome .hd {
+  padding: 18px 20px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.cardhome .hd h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.select,
+.input,
+.range {
+  width: 100%;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+
+
+.choices {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 10px 14px;
+  border: 1px solid #1f2937;
+  cursor: pointer;
+  background: #0b1220;
+border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.chip:hover {
+  transform: translateY(-1px);
+}
+
+ 
+
+.actions {
+  display: flex;
+  gap: 10px;
+justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.addColor {
+  background-color: green;
+}
+
+
+
+
+
+
+
+ 
