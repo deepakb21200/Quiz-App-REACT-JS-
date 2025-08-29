@@ -24,16 +24,14 @@ setReview(g)
 let t = checking2.find((ele)=> ele.id == obj.id)
 
 if(t){
-   let flag = true
+   
   
   for (let index = 0; index < checking2.length; index++) {
 
     if(checking2[index].values == obj.correctAnswer){
       return <div className='correct-note'>✅ Your answer: {obj.correctAnswer}  (Correct) </div>
     }}
-
-    if(flag){
-        return<div className='text-red-500'>❌ Your answer: {t.values} (Not Correct) </div>}
+ return<div className='text-red-500'>❌ Your answer: {t.values} (Not Correct) </div> 
 }else{
   return <div className='text-blue-600'>⏳ Your answer: Not Attempted </div>
 }
